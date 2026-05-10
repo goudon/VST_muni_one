@@ -15,10 +15,13 @@ namespace muni
 
 namespace
 {
-    // muni 顔 (208 x 196 px) を中央に置き、耳が回転してもクリッピングしない
-    // 余白 (各辺最大約 40 px) と上部ボタン用のマージンを確保したサイズ。
-    constexpr int kEditorWidth     = 300;
-    constexpr int kEditorHeight    = 300;
+    // muni 顔 (208 x 196 px) を中央に置き、耳が ±0.5 rad 最大回転 + ノートオン
+    // パルス (+8%) で広がっても見切れない余白を確保したサイズ。
+    // ローカル座標で顔ベース端〜耳 bbox 端: 標準時 +32 / 回転時 +52 / パルス時 +60 px。
+    // 左右各 60 px ずつの余白を取りたいので 顔ベース 208 + 60*2 = 328、ボタン
+    // 配置や上下マージンも含めて 360 x 320 に設定。
+    constexpr int kEditorWidth     = 360;
+    constexpr int kEditorHeight    = 320;
     constexpr int kMargin          = 10;
     constexpr int kTopButtonHeight = 28;
     constexpr int kHelpButtonSize  = 32;
