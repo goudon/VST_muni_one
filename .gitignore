@@ -1,0 +1,31 @@
+build/
+cmake-build-*/
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln
+*.vcxproj*
+
+# macOS
+.DS_Store
+
+# JUCE generated
+JuceLibraryCode/
+
+# IDE
+.idea/
+
+# 秘密情報・コード署名証明書 (CLAUDE.md セキュリティ §6 参照)
+# 拡張子のミスでコミットしないように明示除外
+*.pfx
+*.p12
+*.cer
+*.key
+*.pem
+*.env
+*.env.local
+secrets.json
+secrets.yaml
+secrets.yml
+.envrc
