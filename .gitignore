@@ -29,3 +29,5 @@ secrets.json
 secrets.yaml
 secrets.yml
 .envrc
+
+.claude/
